@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu on Click</title>
+<style>
+  /* Styles for the dropdown menu */
+  .footer{
+    color: white;
+    text-align: center;
+    bottom: 0%;
+    padding-top: 30px;
+    }
+  body {
+  font-family: "Open Sans", sans-serif;
+    /* Multiple background images */
+    background: linear-gradient(to top,rgb(245, 184, 72),skyblue,rgb(139, 239, 139));
+    /* Background position */
+    background-position: center;
+
+    /* Background size */
+    background-size: contain;
+
+    /* Background repeat */
+    background-repeat: no-repeat;
+
+    /* Background attachment to make it scrollable */
+    background-attachment:scroll;
+    
+    /* Other styling to ensure the page is scrollable */
+    height: auto;
+   /* Example height to enable scrolling */
+    margin: 0;
+    padding: 0;
+}
+  .nav{
+        background-color: rgba(red, green, blue, alpha);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    align-items: center;
+  }
+    img{
+      border-radius: 50%;
+    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #404040;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  span{
+    margin-left: 100px;
+  }
+  /* features fieldset block */
+    fieldset {
+            display: grid;
+            width: 90%;
+            margin: 20px;
+            margin-top: 40px;
+            border: 3px solid blue;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            margin-left: 75px;
+            margin-right: auto;
+        }
+        legend {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .feature {
+            color: white;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .feature img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .feature-details {
+            max-width: 600px;
+        }
+        .main-point {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sub-point {
+            font-size: 1em;
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        hr {
+            border: 1px solid greenyellow;
+            margin: 20px 0;
+        }
+</style>
+</head>
+<body>
+    <video autoplay muted loop style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="./static/img/feature.mp4" type="video/mp4">
+        
+    </video>
+<div class="nav">
+<div class="dropdown">
+  <img src="./static/img/home2.jpeg" width="50" height="50"  onclick="toggleDropdown()">
+  <div class="dropdown-content" id="dropdownMenu">
+    <b><a href="./home.html">Home</a>
+    <a href="./about.html">About Us</a></b>
+    
+
+  </div>
+</div>
+<marquee style="color: whitesmoke; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
+    AI_Stock_Slave
+</marquee>
+
+<script>
+  function toggleDropdown() {
+    var dropdownMenu = document.getElementById("dropdownMenu");
+    if (dropdownMenu.style.display === "block") {
+      dropdownMenu.style.display = "none";
+    } else {
+      dropdownMenu.style.display = "block";
+    }
+  }
+</script>
+</div>
+<fieldset>
+    <legend>Features</legend>
+    
+    <div class="feature">
+        <img src="./static/img/coin3.jpeg" style="border-radius: 0;" alt="APOD Image">
+        <div class="feature-details">
+            <div class="main-point">Cryptocurrencies:</div>
+            <ul class="sub-point">
+                <li><strong>Limited Supply</strong>: Many cryptocurrencies, like Bitcoin, have a capped supply. This scarcity can drive value, akin to precious metals like gold.</li>
+                <li><strong>Blockchain Technology</strong>: Cryptocurrencies use blockchain as a distributed ledger to record transactions. This ensures transparency, security, and immutability of the transaction history.</li>
+                <li><strong>Security and Cryptography</strong>: Cryptocurrencies rely heavily on cryptographic principles to secure transactions and control the creation of new units. Public and private keys are used to send and receive cryptocurrencies, ensuring secure transactions.</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="feature">
+      <img src="./static/img/coin2.jpg" style="border-radius: 0;" alt="Mars Rover Photos Image">
+      <div class="feature-details">
+          <div class="main-point">Best Crypto's:</div>
+          <ul class="sub-point">
+            <li><strong>Bitcoin (BTC)</strong>: The first and most well-known cryptocurrency, Bitcoin is often referred to as digital gold. It serves as a store of value and a medium of exchange, and its decentralized nature makes it a hedge against traditional financial systems.</li>
+            <li><strong>Ethereum (ETH)</strong>: Known for its smart contract functionality, Ethereum is the second-largest cryptocurrency. It powers a wide range of decentralized applications (dApps) and DeFi platforms, making it a cornerstone of the blockchain ecosystem.</li>
+            <li><strong>Solana (SOL)</strong>: Solana offers high-speed transactions and low fees, making it attractive for dApps and DeFi projects. Its proof-of-history (PoH) consensus mechanism is designed to enhance scalability.</li>
+            <li><strong>Ripple (XRP)</strong>:  Ripple focuses on enabling fast, low-cost international money transfers. Its partnerships with financial institutions aim to revolutionize the cross-border payments industry.</li>
+            <li><strong>Polygon (MATIC)</strong>: : Polygon (formerly Matic Network) aims to provide scalable and user-friendly infrastructure for Ethereum, facilitating faster and cheaper transactions on the Ethereum network through Layer 2 scaling solutions.</li>
+        </ul>
+      </div>
+  </div>
+  <hr>
+    <div class="feature">
+        <img src="./static/img/coin4.jpeg" style="border-radius: 0;" alt="Mars Rover Photos Image">
+        <div class="feature-details">
+            <div class="main-point">Stocks :</div>
+            <ul class="sub-point">
+              <li><strong>Ownership and Equity</strong>: When you buy a stock, you purchase a share of ownership in a company. This ownership stake entitles you to a portion of the company's profits and assets.</li>
+              <li><strong>Voting Rights</strong>: Shareholders typically have the right to vote on important company matters, such as electing the board of directors or approving major corporate policies. This gives shareholders a voice in the company's governance.</li>
+              <li><strong>Liquidity</strong>: Stocks are generally highly liquid, meaning they can be easily bought and sold on stock exchanges. This liquidity provides investors with flexibility and the ability to quickly respond to market changes.</li>
+          </ul>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="feature">
+        <img src="./static/img/coin1.jpg" style="border-radius: 0;" alt="EONET Image">
+        <div class="feature-details">
+            <div class="main-point">Best Stocks in market:</div>
+            <ul class="sub-point">
+                <li><strong>Apple Inc. (AAPL)</strong>: A global leader in consumer electronics, software, and services, Apple continues to innovate with products like the iPhone, Mac, iPad, and Apple Watch. Its strong brand loyalty and ecosystem of products and services drive substantial revenue.</li>
+                <li><strong>Microsoft Corporation (MSFT)</strong>: Microsoft is a dominant player in software, cloud computing (Azure), and productivity solutions (Office 365). Its diverse revenue streams and focus on innovation make it a solid investment.</li>
+                <li><strong>Amazon.com Inc. (AMZN)</strong>: Amazon is a leader in e-commerce and cloud computing (AWS). Its expansion into various sectors, including streaming, healthcare, and logistics, provides multiple growth opportunities.</li>
+                <li><strong>Alphabet Inc. (GOOGL)</strong>: The parent company of Google, Alphabet is a powerhouse in digital advertising, cloud computing, and technology innovation. Its diverse portfolio includes YouTube, Android, and numerous AI projects.</li> 
+                <li><strong>Tesla Inc. (TSLA)</strong>: Tesla is a pioneer in electric vehicles (EVs) and renewable energy solutions. Its strong brand, technological advancements, and ambitious growth plans make it a prominent player in the EV market.</li>  
+              </ul>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="feature">
+        <img src="./static/img/crypto6.jpg" style="border-radius: 0;" alt="NeoWs Image">
+        <div class="feature-details">
+            <div class="main-point">Commodities: </div>
+            <ul class="sub-point">
+                <li><strong>Global Demand</strong>: Commodities are essential for global economies. Their demand is driven by various factors, including population growth, industrialization, and economic development.</li>
+                  <li><strong>Inflation Hedge</strong>: Commodities often act as a hedge against inflation. When the prices of goods and services rise, the value of commodities tends to increase, preserving purchasing power.</li>
+                <li><strong>Diverse Categories</strong>: Commodities can be broadly categorized into energy (oil, natural gas), metals (gold, silver, copper), agricultural (wheat, corn, coffee), and livestock (cattle, hogs). Each category has its own supply and demand drivers.</li>
+            <li><strong>Futures Markets</strong>: Commodities are commonly traded through futures contracts, which are agreements to buy or sell a commodity at a predetermined price at a specified future date. Futures markets provide liquidity and enable hedging and speculation.</li>
+              </ul>
+        </div>
+    </div>
+    <hr>
+    
+  </fieldset>
+  <div class="footer">
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/aaruhi-ai-bot-361889315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./static/img/linkedin.webp" height="20" width="20"></a>
+        <a href="https://github.com/dashboard"><img src="./static/img/github1.png" height="20" width="20"></a>
+        <a href="mailto:vutlasanthosh9@gmail.com"><img src="./static/img/mail.webp" height="20" width="20"></a>
+    </div>
+    <div class="contact-info">
+        <p>Phone: +91 8309225974</p>
+        <p>Email: vutlasanthosh9@gmail.com</p>
+    </div>
+  </div>
+  </body>
+  </html>
